@@ -4,7 +4,7 @@
 
 ## 启动
 
-环境：Node.js 22 或以上、pnpm 8.15.4。无需 Docker、数据库或 API 密钥。
+环境：Node.js 22.x、pnpm 8.15.4。无需 Docker、数据库或 API 密钥。
 
 ```powershell
 pnpm install
@@ -50,3 +50,11 @@ docs/                     范围说明与实际验收记录
 后续真实核查能力应通过服务端接口接入。不要把 API 密钥放进客户端组件或 `NEXT_PUBLIC_*` 变量中，也不要把当前提示替换为模拟核查结果。
 
 原始需求见 [首页实施要求](docs/home-spec.md) 和 [样式规范](docs/style-guide.md)；已完成检查、截图及尚未验证的项目见 [实际验证记录](docs/verification.md)。
+
+## Vercel 部署
+
+仓库：[WhiteYin/true-or-false](https://github.com/WhiteYin/true-or-false)，生产分支为 `master`。
+
+项目已包含 `vercel.json`，指定 Next.js 框架、pnpm 8.15.4 的冻结锁文件安装命令和生产构建命令。Node.js 固定为 22.x；首页无需环境变量即可构建。首次部署时在 Vercel 导入本仓库，根目录选择仓库根目录，输出目录保留框架默认值。
+
+详细导入设置和验证范围见 [Vercel 部署说明](docs/vercel-deployment.md)。

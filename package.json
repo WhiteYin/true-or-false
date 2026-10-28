@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@8.15.4",
-  "engines": { "node": ">=22.0.0" },
+  "engines": { "node": "22.x" },
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
